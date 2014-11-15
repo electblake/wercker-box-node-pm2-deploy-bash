@@ -1,6 +1,6 @@
 name: node-pm2-deploy-bash
 version: 0.0.4
-inherits: electblake/ubuntu12.04-nodejs0.10@1.2.0
+inherits: wercker/ubuntu12.04-nodejs0.10@1.2.0
 type: main
 platform: ubuntu@12.04
 description: "Deploy with pm2, then build and prepare with ./deployment/hook-scripts"
