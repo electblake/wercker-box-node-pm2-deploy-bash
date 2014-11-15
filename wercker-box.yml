@@ -31,14 +31,11 @@ script: |
   sudo n stable
   node -v
 
-  # grunt-cli
   # sudo npm install -g grunt-cli
-
-  # bower global, so you dont need to change the package.json 
   sudo npm install -g bower
-
-  # bower global, so you dont need to change the package.json 
   sudo npm install -g pm2
+  
+  sudo chown ubuntu:ubuntu /home/ubuntu/.npm
 
   # gems
   sudo gem install compass

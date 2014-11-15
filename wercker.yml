@@ -1,13 +1,1 @@
-box: wercker/ubuntu12.04-nodejs0.10@1.2.0
-build:
-  steps:
-    - script:
-        name: build-release
-        code: |
-          exec ./deployments/build-release.sh
-deploy:
-  steps:
-    - script:
-        name: pm2 deploy
-        code: |
-          pm2 deploy ecosystem.json $NODE_ENV
+box: wercker/default
