@@ -1,1 +1,12 @@
-box: wercker/default
+box: electblake/node-pm2-deploy-bash
+build:
+	- plasticine/bower-install@0.0.4:
+	- script:
+	    name: build-release
+	    code: |
+	      exec ./deployments/build-release.sh
+deploy:
+	- script:
+	    name: pm2 deploy
+	    code: |
+	      pm2 deploy ecosystem.json $NODE_ENV

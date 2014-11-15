@@ -27,9 +27,6 @@ npm install
 echo "-- [app] bower install"
 bower install
 
-echo "-- [theme] bower install"
-cd theme-profile_home && bower install && cd ../
-
 ```
 
 This is a specialized fork of my [Node Grunt Compass Box](https://github.com/electblake/wercker-box-node-grunt-compass) which is designed:
@@ -46,6 +43,9 @@ The folling modules are installed globally for you.
 
 #### Build Workflow
 
+1. exec `./deployment/build-release.sh`
+2. 
+
 The following ruby gems are installed for you
 
 * [SASS](http://sass-lang.com/)
@@ -54,7 +54,6 @@ The following ruby gems are installed for you
 
 #### Deploy Workflow
 
-* `./deployment/build-release.sh`
 * `pm2 deploy ecosystem.json $NODE_ENV`
 
 ### Related Wercker Boxes
